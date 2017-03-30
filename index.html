@@ -3,19 +3,25 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>知乎 - 登陆</title>
+    <title>知乎 - 与世界分享你的知识、经验和见解</title>
+    <link rel="shortcut icon" href="https://static.zhihu.com/static/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
 </head>
 
 <body>
-    <header id="index-header">
-        <h1 id="zhihu">知乎</h1>
-        <p id="slogan">与世界分享你的知识、经验和见解</p>
-    </header>
-    <main id="dialog">
-        <header id="dialog-header">
-            <span id="signup-option">注册</span>
-            <span id="signin-option">登陆</span>
+    <div class="main-container">
+        <header id="index-header">
+            <h1 id="zhihu">知乎</h1>
+            <p id="slogan">与世界分享你的知识、经验和见解</p>
         </header>
+        <main id="dialog">
+            <header id="dialog-header">
+                <button id="signup-option">注册</span>
+            <button id="signin-option">登陆</span>
+        </header>
+        <!-- 注册表单 -->
+        <div class="signup-wrapper">
         <form id="signup" class="">
             <div id="group-inputs">
                 <div class="input-wrapper input-username">
@@ -34,8 +40,12 @@
             <!-- .group-inputs -->
             <input id="signup-btn" class="sign-btn" type="button" onclick="" / value="注册知乎">
         </form>
+        <p class="agreement-tips">点击「注册」按钮，即代表你同意<a href="/terms">《知乎协议》</a></p>
+    </div>
 
-        <form id="signin" class="" hidden="hidden">
+        <!-- 登陆表单 -->
+        <div class="signin-wrapper">
+        <form id="signin" class="">
             <div class="group-inputs">
                 <div class="input-wrapper input-account">
                     <input name="account" type="text" placeholder="手机号或邮箱" />
@@ -50,7 +60,42 @@
             <!-- .group-inputs -->
             <input id="signin-btn" class="sign-btn" type="button" onclick="" / value="登陆">
         </form>
+        <div class="signin-btn-wrapper">
+            <button class="signin-switch-button" type="button">手机验证码登陆</button>
+                <button class="unable-signin" type="button">无法登陆？</button>
+    </div>
+    <div class="social-signup-wrapper">
+        <button class="social-signup-button" type="button">社交账号登陆</button>
+    </div>
+    </div>
+    <button class="download-app" type="button">下载知乎App</button>
     </main>
+
+    <footer id="index-footer" class="informations">
+        <div class="informations-wrapper">
+            <span>&copy; 2017 知乎</span>
+            <a href="/roundtable" target="_blank">知乎圆桌</a>
+            <span class="dot">·</span>
+            <a href="/explore" target="_blank">发现</a>
+            <span class="dot">·</span>
+            <a href="/app" target="_blank">移动应用</a>
+            <span class="dot">·</span>
+            <a href="/org/signin" target="_blank">使用机构账号登陆</a>
+            <span class="dot">·</span>
+            <a href="/contact" target="_blank">联系我们</a>
+            <span class="dot">·</span>
+            <a href="/careers" target="_blank">来知乎工作</a>
+            <span class="dot">·</span>
+        </div>
+        <div class="informations-wrapper">
+            <a href="http://www.miibeian.gov.cn/" target="_blank">京 ICP 证 110745 号</a>
+            <span class="dot">·</span>
+            <span>京公网安备 11010802010035 号</span>
+            <span class="dot">·</span>
+            <a href="http://zhstatic.zhihu.com/assets/zhihu/publish-license.jpg" target="_blank">出版物经营许可证</a>
+        </div>
+    </footer>
+    </div>
 </body>
 
 </html>
