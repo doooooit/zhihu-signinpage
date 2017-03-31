@@ -6,24 +6,28 @@
     <title>知乎 - 与世界分享你的知识、经验和见解</title>
     <link rel="shortcut icon" href="https://static.zhihu.com/static/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/base.css" />
-    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/main.css" />
 </head>
 
 <body>
-    <div class="main-container">
+        <main id="index-main">
         <header id="index-header">
-            <h1 id="zhihu">知乎</h1>
-            <p id="slogan">与世界分享你的知识、经验和见解</p>
+            <!--
+            <div class="logo">
+                <img src="images/zhihu-logo.png" />
+            </div>
+        -->
+            <h1 class="logo hide-text">知乎</h1>
+            <h2 id="slogan">与世界分享你的知识、经验和见解</h2>
         </header>
-        <main id="dialog">
-            <header id="dialog-header">
-                <button id="signup-option">注册</span>
-            <button id="signin-option">登陆</span>
-        </header>
+            <div class="index-tab-nav">
+                <button id="signup-option">注册</button>
+                <button id="signin-option">登陆</button>
+            </div>
         <!-- 注册表单 -->
         <div class="signup-wrapper">
         <form id="signup" class="">
-            <div id="group-inputs">
+            <div class="group-inputs">
                 <div class="input-wrapper input-username">
                     <input name="username" type="text" placeholder="姓名" />
                 </div>
@@ -40,7 +44,7 @@
             <!-- .group-inputs -->
             <input id="signup-btn" class="sign-btn" type="button" onclick="" / value="注册知乎">
         </form>
-        <p class="agreement-tips">点击「注册」按钮，即代表你同意<a href="/terms">《知乎协议》</a></p>
+        <p class="agreement-tips">点击「注册」按钮，即代表你同意<a href="https://www.zhihu.com/terms">《知乎协议》</a></p>
     </div>
 
         <!-- 登陆表单 -->
@@ -62,30 +66,30 @@
         </form>
         <div class="signin-btn-wrapper">
             <button class="signin-switch-button" type="button">手机验证码登陆</button>
-                <button class="unable-signin" type="button">无法登陆？</button>
-    </div>
-    <div class="social-signup-wrapper">
-        <button class="social-signup-button" type="button">社交账号登陆</button>
-    </div>
-    </div>
-    <button class="download-app" type="button">下载知乎App</button>
+            <button class="unable-signin" type="button">无法登陆？</button>
+        </div>
+        <div class="social-signup-wrapper">
+            <button class="social-signup-button" type="button">社交账号登陆</button>
+        </div>
+        </div>
+        <button class="download-app" type="button">下载知乎App</button>
     </main>
 
     <footer id="index-footer" class="informations">
         <div class="informations-wrapper">
             <span>&copy; 2017 知乎</span>
-            <a href="/roundtable" target="_blank">知乎圆桌</a>
             <span class="dot">·</span>
-            <a href="/explore" target="_blank">发现</a>
+            <a href="https://zhihu.com/roundtable" target="_blank">知乎圆桌</a>
             <span class="dot">·</span>
-            <a href="/app" target="_blank">移动应用</a>
+            <a href="https://zhihu.com/explore" target="_blank">发现</a>
             <span class="dot">·</span>
-            <a href="/org/signin" target="_blank">使用机构账号登陆</a>
+            <a href="https://zhihu.com/app" target="_blank">移动应用</a>
             <span class="dot">·</span>
-            <a href="/contact" target="_blank">联系我们</a>
+            <a href="https://zhihu.com/org/signin" target="_blank">使用机构账号登陆</a>
             <span class="dot">·</span>
-            <a href="/careers" target="_blank">来知乎工作</a>
+            <a href="https://zhihu.com/contact" target="_blank">联系我们</a>
             <span class="dot">·</span>
+            <a href="https://zhihu.com/careers" target="_blank">来知乎工作</a>
         </div>
         <div class="informations-wrapper">
             <a href="http://www.miibeian.gov.cn/" target="_blank">京 ICP 证 110745 号</a>
@@ -95,7 +99,6 @@
             <a href="http://zhstatic.zhihu.com/assets/zhihu/publish-license.jpg" target="_blank">出版物经营许可证</a>
         </div>
     </footer>
-    </div>
 </body>
 
 </html>
