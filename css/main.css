@@ -41,9 +41,20 @@
 }
 .index-tab-nav button {
     height: 2.15em;
-    width: 4.5em;
-    color: #0f88eb;
+    width: 3em;
     font-size: 1.125em;
+}
+.nav-active {
+    color: #0f88eb;
+    border-bottom: 3px solid #0f88eb;
+}
+.nav-deactive {
+    color: #555;
+    opacity: .7;
+    transition: opacity .15s, color .15s;
+}
+.nav-deactive:hover {
+    opacity: 1;
 }
 
 .group-inputs {
@@ -135,7 +146,7 @@
 
 .download-app {
     position: relative;
-    bottom: 0;
+    bottom: -1.2em;
     width: 100%;
     height: 39.4px;
     color: #5fa6e5;
@@ -145,7 +156,7 @@
 
 footer {
     position: relative;
-    bottom: -3em;
+    bottom: -5em;
     padding-bottom: 2em;
 }
 

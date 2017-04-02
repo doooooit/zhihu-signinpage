@@ -7,9 +7,11 @@
     <link rel="shortcut icon" href="https://static.zhihu.com/static/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/main.css" />
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
+    <canvas id="Mycanvas"></canvas>
         <main id="index-main">
         <header id="index-header">
             <!--
@@ -20,10 +22,10 @@
             <h1 class="logo hide-text">知乎</h1>
             <h2 id="slogan">与世界分享你的知识、经验和见解</h2>
         </header>
-            <div class="index-tab-nav">
-                <button id="signup-option">注册</button>
-                <button id="signin-option">登陆</button>
-            </div>
+        <nav class="index-tab-nav">
+            <button id="signup-option" type="button">注册</button>
+            <button id="signin-option" type="button">登陆</button>
+        </nav>
         <!-- 注册表单 -->
         <div class="signup-wrapper">
         <form id="signup" class="">
@@ -99,6 +101,8 @@
             <a href="http://zhstatic.zhihu.com/assets/zhihu/publish-license.jpg" target="_blank">出版物经营许可证</a>
         </div>
     </footer>
+    <script src="js/action.js"></script>
+    <script src="js/canvas.js"></script>
 </body>
 
 </html>
