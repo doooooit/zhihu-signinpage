@@ -4,6 +4,7 @@ $(function() {
     $('.signin-wrapper').hide();
     $('#signup-option').addClass('nav-active');
     $('#signin-option').addClass('nav-deactive');
+    $('#info').hide();
 });
 
 $('#signup-option').click(function() {
@@ -84,9 +85,29 @@ $('#signup-btn').click(function() {
                 $pwd.after('<label>请输入 6-128 位的密码');
             }
         })
-
 })
 
-$('signin-btn').click(function() {
-    var signinRes = FORMS.signin()
+var $accountSigninInput = $('#signin [name=account]');
+var $pwdSigninInput = $('#signin [name=password]');
+
+$accountSigninInput.click(() => $accountSigninInput.next('label').remove());
+
+$pwdSigninInput.click(() => $pwdSigninInput.next('label').remove());
+
+$('#signin-btn').click(function() {
+    var signinRes = FORMS.signin($accountSigninInput.val(), $pwdSigninInput.val());
+    if (-1 == signinRes) {
+        $accountSigninInput.next('label').remove();
+        $accountSigninInput.after('<label>账号或密码错误</label>');
+    } else if (1 == signinRes) {
+        $pwdSigninInput.next('label').remove();
+        $pwdSigninInput.after('<label>账号或密码错误</label>');
+    } else {
+        $('#info').text('登陆成功，3 秒后跳转至 真·知乎网站');
+        $('#info').show();
+        setTimeout(() => {
+            $('#info').hide();
+            window.location.href = 'https://www.zhihu.com';
+        }, 3000);
+    }
 })

@@ -34,11 +34,11 @@ FORMS.signin = function(account, pwd) {
     // 从 Storage 中取出数据并验证存在性
     var accountObj = JSON.parse(sessionStorage.getItem(account));
     if (!accountObj) { // 如果账号不存在
-        return false;
-    } else if (toMD5(pwd) === accountObj.pwdmd5) { // 密码正确
-        return true;
+        return -1;
+    } else if (md5(pwd) === accountObj.pwdmd5) { // 密码正确
+        return 0;
     } else { // 密码不正确
-        return false;
+        return 1;
     }
 }
 
