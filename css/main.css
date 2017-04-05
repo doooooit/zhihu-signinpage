@@ -82,6 +82,16 @@
     height: 2.9em;
     border-bottom: 1px solid #e8e8e8;
     background-color: #fff;
+    position: relative;
+}
+
+.input-err {
+    position: absolute;
+    top: 0;
+    right: 8px;
+    padding: 0 8px;
+    color: #c33;
+    line-height: 2.9em;
 }
 
 .input-captcha {

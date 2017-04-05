@@ -49,7 +49,7 @@ $('#signup-btn').click(function() {
         .then(obj => {
             var signupRes = FORMS.signup(obj);
             if (!signupRes) {
-                $account.after('<label>账号已存在</label>');
+                $account.after('<label class="input-err">账号已存在</label>');
             } else {
                 $username.val('');
                 $account.val('');
@@ -61,28 +61,28 @@ $('#signup-btn').click(function() {
             // 姓名验证反馈
             if ('1' === e[0]) {
                 $username.next('label').remove();
-                $username.after('<label>请填写姓名</label>');
+                $username.after('<label class="input-err">请填写姓名</label>');
             } else if ('2' === e[0]) {
                 $username.next('label').remove();
-                $username.after('<label>姓名最短为2个汉字或3个英文字符</label>');
+                $username.after('<label class="input-err">姓名最短为2个汉字或3个英文字符</label>');
             }
 
             // 账号验证反馈
             if ('1' === e[1]) {
                 $account.next('label').remove();
-                $account.after('<label>请填写手机号</label>');
+                $account.after('<label class="input-err">请填写手机号</label>');
             } else if ('2' === e[1]) {
                 $account.next('label').remove();
-                $account.after('<label>请输入正确的手机号</label>');
+                $account.after('<label class="input-err">请输入正确的手机号</label>');
             }
 
             // 密码验证反馈
             if ('1' === e[2]) {
                 $pwd.next('label').remove();
-                $pwd.after('<label>请填写密码</label>');
+                $pwd.after('<label class="input-err">请填写密码</label>');
             } else if ('2' === e[2]) {
                 $pwd.next('label').remove();
-                $pwd.after('<label>请输入 6-128 位的密码');
+                $pwd.after('<label class="input-err">请输入 6-128 位的密码');
             }
         })
 })
@@ -98,10 +98,10 @@ $('#signin-btn').click(function() {
     var signinRes = FORMS.signin($accountSigninInput.val(), $pwdSigninInput.val());
     if (-1 == signinRes) {
         $accountSigninInput.next('label').remove();
-        $accountSigninInput.after('<label>账号或密码错误</label>');
+        $accountSigninInput.after('<label class="input-err">账号或密码错误</label>');
     } else if (1 == signinRes) {
         $pwdSigninInput.next('label').remove();
-        $pwdSigninInput.after('<label>账号或密码错误</label>');
+        $pwdSigninInput.after('<label class="input-err">账号或密码错误</label>');
     } else {
         $('#info').text('登陆成功，3 秒后跳转至 真·知乎网站');
         $('#info').show();
