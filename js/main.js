@@ -103,11 +103,12 @@ $('#signin-btn').click(function() {
         $pwdSigninInput.next('label').remove();
         $pwdSigninInput.after('<label class="input-err">账号或密码错误</label>');
     } else {
-        $('#info').text('登陆成功，3 秒后跳转至 真·知乎网站');
         $('#info').show();
-        setTimeout(() => {
-            $('#info').hide();
-            window.location.href = 'https://www.zhihu.com';
-        }, 3000);
+        for (var i = 3; i > 0; i--) {
+            (function (ind) {
+                setTimeout(() => $('#info').text('登陆成功，' + ind + ' 秒后跳转至 真·知乎'), 1000 * (3 - ind));
+            })(i);
+        }
+        setTimeout(() => window.location.href = 'https://www.zhihu.com', 3000);
     }
 })
